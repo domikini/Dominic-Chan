@@ -12,6 +12,12 @@ Module.register("sltider", {
         direction: null,
         time: null,
     },
+
+    // Define required scripts.
+	getStyles: function () {
+		return ["sltider.css"];
+	},
+
     getTemplate: function () {
         return "sltider.njk";
     },
@@ -32,7 +38,7 @@ Module.register("sltider", {
         //return `https://api.resrobot.se/v2/depar/api/category/pmp3g/version/2/geotype/point/lon/${lon}/lat/${lat}/data.json`;
         return `https://api.resrobot.se/v2/departureBoard.json?key=${key}&id=${id}&maxJourneys=${maxJourneys}&passlist=${passlist}&products=${products}`;
     },
-    
+
     /**
      * Implements method in interface for fetching a forecast.
      * Handling hourly forecast would be easy as not grouping by day but it seems really specific for one weather provider for now.

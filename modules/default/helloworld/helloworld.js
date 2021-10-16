@@ -10,6 +10,11 @@ Module.register("helloworld", {
 		text: "Hello World!"
 	},
 
+	// Define required scripts.
+	getStyles: function () {
+		return ["helloworld.css"];
+	},
+
 	getTemplate: function () {
 		return "helloworld.njk";
 	},
